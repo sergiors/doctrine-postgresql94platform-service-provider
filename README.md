@@ -5,7 +5,7 @@ Install
 -------
 
 ```
-composer require sergiors/doctrine-cache-service-provider
+composer require sergiors/doctrine-postgresql94platform-service-provider
 ```
 
 How to use
