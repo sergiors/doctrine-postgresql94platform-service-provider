@@ -1,6 +1,6 @@
 <?php
 
-namespace Sergiors\Silex\Doctrine\DBAL\Platforms\Keywords;
+namespace Sergiors\Pimple\Doctrine\DBAL\Platforms\Keywords;
 
 use Doctrine\DBAL\Platforms\Keywords\PostgreSQL92Keywords;
 

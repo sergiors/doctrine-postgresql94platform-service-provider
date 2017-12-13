@@ -1,27 +1,27 @@
 <?php
 
-namespace Sergiors\Silex\Provider;
+namespace Sergiors\Pimple\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Doctrine\DBAL\Types\Type;
-use Sergiors\Silex\Doctrine\DBAL\Platforms\PostgreSQL94ContribPlatform;
-use Sergiors\Silex\Doctrine\DBAL\Types\JsonbType;
+use Sergiors\Pimple\Doctrine\DBAL\Platforms\PostgreSQL94ContribPlatform;
+use Sergiors\Pimple\Doctrine\DBAL\Types\JsonbType;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
 final class DoctrinePostgreSQL94PlatformServiceProvider implements ServiceProviderInterface
 {
-    public function register(Container $app)
+    public function register(Container $container)
     {
-        if (!isset($app['db'])) {
+        if (!isset($container['db'])) {
             throw new \LogicException(
                 'You must register the DoctrineServiceProvider to use the DoctrinePostgreSQL94PlatformServiceProvider.'
             );
         }
 
-        $app['db.options'] = array_merge($app['db.options'] ?? [], [
+        $container['db.options'] = array_merge($container['db.options'] ?? [], [
             'platform' => new PostgreSQL94ContribPlatform(),
         ]);
 

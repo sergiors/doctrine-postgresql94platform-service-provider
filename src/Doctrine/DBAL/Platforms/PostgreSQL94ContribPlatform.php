@@ -1,9 +1,9 @@
 <?php
 
-namespace Sergiors\Silex\Doctrine\DBAL\Platforms;
+namespace Sergiors\Pimple\Doctrine\DBAL\Platforms;
 
 use Doctrine\DBAL\Platforms\PostgreSQL92Platform;
-use Sergiors\Silex\Doctrine\DBAL\Platforms\Keywords\PostgreSQL94ContribKeywords;
+use Sergiors\Pimple\Doctrine\DBAL\Platforms\Keywords\PostgreSQL94ContribKeywords;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>

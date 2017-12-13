@@ -1,6 +1,6 @@
 {
     "name": "sergiors/doctrine-postgresql94platform-service-provider",
-    "description": "PostgreSQL 94 for Silex",
+    "description": "PostgreSQL 94 for Pimple",
     "license": "MIT",
     "authors": [
         {
@@ -10,11 +10,17 @@
     ],
     "require": {
         "php": "^7.0",
-        "silex/silex": "^2"
+        "pimple/pimple": "^3.2",
+        "doctrine/dbal": "^2.6"
     },
     "autoload": {
         "psr-4": {
-            "Sergiors\\Silex\\": "src"
+            "Sergiors\\Pimple\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sergiors\\Pimple\\Tests\\": "tests"
         }
     },
     "require-dev": {

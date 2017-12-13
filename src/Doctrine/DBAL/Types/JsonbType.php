@@ -1,6 +1,6 @@
 <?php
 
-namespace Sergiors\Silex\Doctrine\DBAL\Types;
+namespace Sergiors\Pimple\Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\JsonArrayType;
@@ -10,10 +10,15 @@ use Doctrine\DBAL\Types\JsonArrayType;
  */
 final class JsonbType extends JsonArrayType
 {
+    /**
+     * @var string
+     */
     const JSONB = 'jsonb';
 
-    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
-    {
+    public function getSQLDeclaration(
+        array $fieldDeclaration,
+        AbstractPlatform $platform
+    ) {
         return $platform->getJsonbTypeDeclarationSQL($fieldDeclaration);
     }
 
